@@ -63,9 +63,7 @@ public class UserDao{
 
 **같은 관심사를 묶어서 관리하는 것이 필요**
 
-**UserDao 관심사항**
-
->1. DB 연결<br>2. SQL문으로 Statement만들고 실행<br>3. 공유 리소스 반환
+> **UserDao 관심사항** <br><br>1. DB 연결<br>2. SQL문으로 Statement만들고 실행<br>3. 공유 리소스 반환
 
 **DB 연결 분리한 UserDao**
 
