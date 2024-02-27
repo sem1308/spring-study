@@ -545,11 +545,9 @@ getUserFailure()에는 조건, 행위, 결과에 대한 내용이 잘 표현
 
 |  | 단계 | 내용 | 코드 |
 | --- | --- | --- | --- |
-| 조건 (given) | 어떤 조건을 가지고 | 가져올 사용자 정보자 존재하지 않는 경우에 | dao.deleteAII( )；
-assertThat(dao.getCount(), is(0))； |
+| 조건 (given) | 어떤 조건을 가지고 | 가져올 사용자 정보자 존재하지 않는 경우에 | dao.deleteAII( )；assertThat(dao.getCount(), is(0))； |
 | 행위 (when) | 무엇을 할 때 | 존재하지 않는 id로 get()을 실행하면 | get(”unknown_id”); |
-| 결과 (then) | 어떤 결과가 나온다 | 특별한 예외가 던져진다 | @Test(expected=
-EmptyResultDataAccessException.class) |
+| 결과 (then) | 어떤 결과가 나온다 | 특별한 예외가 던져진다 | @Test(expected=EmptyResultDataAccessException.class) |
 
 테스트 코드가 마치 설계도로 보임
 
@@ -643,8 +641,8 @@ JUnit이 하나의 테스트 클래스를 가져와 테스트를 수행하는 �
 ---
 
 > 🔶 픽스처
-
-테스트를 수행하는 데 필요한 정보나 오브젝트
+>
+>테스트를 수행하는 데 필요한 정보나 오브젝트
 > 
 
 UserDaoTest에서라면 dao가 대표적인 픽스처
