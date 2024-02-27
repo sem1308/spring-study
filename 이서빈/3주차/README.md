@@ -468,9 +468,8 @@ public User get(String id) throws SQLException {
 ⇒ 실제 기능을 가진 애플리케이션 코드를 만들고 나면, 바로 이 테스트를 실행해서 설계한 대로 코드가 동작하는지를 빠르게 검증할 수 있음!
 
 |  | 단계 | 내용 | 코드 |
-|  |  |  |  |
-| 조건 | 어떤 조건을 가지고 | 가져올 사용자 정보가 존재하지 않는 경우에 | dao.deleteAll();
-assertThat(dao.getCount(), is(0)); |
+| --- | --- | --- | --- |
+| 조건 | 어떤 조건을 가지고 | 가져올 사용자 정보가 존재하지 않는 경우에 | dao.deleteAll(); assertThat(dao.getCount(), is(0)); |
 | 행위 | 무엇을 할 때 | 존재하지 않는 id로 get()을 실행하면 | get(”unknown_id”); |
 | 결과 | 어떤 결과가 나온다 | 특별한 예외가 던져진다.  | @Test(expected=EmptyResultDataAccessException.class) |
 
