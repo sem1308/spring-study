@@ -254,6 +254,8 @@ public static void main(String[] args) {
 
 UserDaoTest에서 테스트 수행 후 DB 정보를 삭제하는 기능 추가
 
+<br>
+
 **deleteAll(), getCount() 추가**
 
 ---
@@ -325,6 +327,8 @@ public void addAndGetO throws SQLException {
 }
 ```
 
+<br>
+
 **동일한 결과를 보장하는 테스트**
 
 ---
@@ -342,6 +346,8 @@ public void addAndGetO throws SQLException {
 성의 없이테스트를 만드는 바람에 문제가 있는 코드인데도 테스트가 성공하게 만드는 건 더 위험
 
 특히 한 가지 결과만 검증하고 마는 것은 상당히 위험
+
+<br>
 
 **getCount() 테스트**
 
@@ -399,6 +405,8 @@ JUnit 실행시 테스트들이 어떤 순서로 실행되는지 알 수 없음
 
 **테스트의 결과가 테스트 실행 순서에 영향을 받는다면 테스트를 잘못 만든 것**
 
+<br>
+
 **addAndGet() 테스트 보완**
 
 ---
@@ -434,6 +442,8 @@ public void addAndGet() throws SQLException {
 }
 ```
 
+<br>
+
 **get() 예외조건에 대한 테스트**
 
 ---
@@ -462,6 +472,8 @@ public void getUserFailure() throws SQLException {
 - **위의 경우는 JUnit4까지는 되지만 JUnit5에서는 메소드를 통해 하는 것으로 기억!!**
 - 아직 테스트를 실행하면 실패함
     - dao에서 rs.next()를 할 때 아무런 row도 없으므로 SQLException을 발생시키기 때문
+
+<br>
 
 **테스트를 성공시키기 위한 코드의 수정**
 
@@ -500,8 +512,8 @@ public User get(String id) throws SQLException {
 **예외적인 테스트를 항상 먼저 생각할 것!**
 
 > 👨🏻 로드 존슨 (스프링 창시자)
-
-“항상 네거티브 테스트를 먼저 만들라”
+>
+>“항상 네거티브 테스트를 먼저 만들라”
 > 
 
 ### 2.3.4 테스트가 이끄는 개발
@@ -512,6 +524,8 @@ public User get(String id) throws SQLException {
 2. UserDao 코드 수정
 
 새로운 기능을 넣기 위해 UserDao 코드 수정하고 그 코드를 검증하기 위해 테스트를 만들지 않음
+
+<br>
 
 **기능설계를 위한 테스트**
 
@@ -540,6 +554,8 @@ EmptyResultDataAccessException.class) |
 테스트 코드가 마치 설계도로 보임
 
 해당 설계도에 맞게 코드를 작성하지 않으면 그 코드가 제대로 된 코드가 아님을 알 수 있음
+
+<br>
 
 **테스트 주도 개발**
 
