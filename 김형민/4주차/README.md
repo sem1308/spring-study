@@ -18,7 +18,7 @@ public void deleteAll() throws ClassNotFoundException, SQLException {
 	ps.executeUpdate(); //여기서 예외가 발생하면 메소드 실행이 중단된다.
 	
   //예외가 발생하면 close() 메서드들이 실행되지 못한다.
-  //그렇게 될떄마다 제대로 ps와 c의 리소스가 반환되지 않게 되고, 
+  //그렇게 될 때마다 제대로 ps와 c의 리소스가 반환되지 않게 되고, 
   //커넥션 풀에 여유가 생기지 않게 되어 리소스가 모자라게 된다.
 	ps.close();
 	c.close();
@@ -219,7 +219,7 @@ public class UserDaoDeleteAll extends UserDao {
 
 **전략 패턴**
 
-![Untitled](imgs/1.png)
+![1](https://github.com/fkgnssla/spring-study/assets/92067099/29ee8811-011b-4f7a-9e93-b14ac0b3b8cd)
 
 - 오브젝트를 아예 둘로 분리하여 클래스 레벨에서는 **인터페이스를 통해서만 의존하도록** 한다.
 - **확장**에 해당하는 **변하는 부분을 별도의 클래스**로 만든다.
@@ -268,7 +268,7 @@ public void deleteAll() throws SQLException {
 
 ### DI 적용을 위한 클라이언트 컨텍스트 분리
 
-![Untitled](imgs/2.png)
+![2](https://github.com/fkgnssla/spring-study/assets/92067099/a1290566-4b23-47ca-a97a-4c7d74de2cda)
 
 - 전략 패턴에 따르면 Context가 어떤 전략을 사용하게 할 것인가는 Context를 사용하는 Client가 결정하는 게 일반적이다.
 - Client ⇒ UserDao
@@ -497,7 +497,7 @@ public class UserDao {
 
 ### JdbcContext에 적용된 템플릿/콜백
 
-![Untitled](imgs/3.png)
+![caa](https://github.com/fkgnssla/spring-study/assets/92067099/5f85f3f5-0221-4006-96fd-c386a82caa19)
 
 ## **3.5.2** 편리한 콜백의 재활용
 
